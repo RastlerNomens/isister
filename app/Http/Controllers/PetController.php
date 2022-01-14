@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Pet;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PetController extends Controller
 {
@@ -46,6 +47,13 @@ class PetController extends Controller
         ]);
 
         $pet = new Pet();
+
+        if ($request->file('image')) {
+            $imagePath = $request->file('image');
+            $imageName = $imagePath->getClientOriginalName();
+            
+            $pet->image = str_replace("public/", "", $request->file('image')->storeAs('public', $imageName));
+        }
 
         $pet->owner = Auth::user()->id;
         $pet->name = $request->get('name');
@@ -91,6 +99,14 @@ class PetController extends Controller
     public function update(Request $request, $id)
     {
         $pet = Pet::find($id);
+
+        if ($request->file('image')) {
+            $imagePath = $request->file('image');
+            $imageName = $imagePath->getClientOriginalName();
+
+            Storage::delete('/public/'.$pet->image);
+            $pet->image = str_replace("public/", "", $request->file('image')->storeAs('public', $imageName));
+        }
 
         $pet->name = $request->get('name');
         $pet->race = $request->get('race');

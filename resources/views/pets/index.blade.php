@@ -18,7 +18,7 @@
     </div>
     @foreach ($pets as $pet)
     <div class="card col-3 mx-auto" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="/storage/{{$pet['image']}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{$pet['name']}}</h5>
         </div>
@@ -57,7 +57,10 @@
             </form>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Creado: {{$pet['created_at']}}</small>
+            <small class="text-muted">
+                <p>{{$pet['code_chip']}}</p>
+                <p>Creado: {{$pet['created_at']}}</p>
+            </small>
         </div>
     </div>
     @endforeach
@@ -66,7 +69,7 @@
 
 <!-- Modal Create -->
 <div class="modal fade" id="createPet" tabindex="-1" aria-labelledby="createPetLabel" aria-hidden="true">
-    <form method="POST" action="{{route('mascotas.store')}}">
+    <form method="POST" action="{{route('mascotas.store')}}" enctype="multipart/form-data">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -78,6 +81,10 @@
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" required/>
                 <small id="nameHelp" class="form-text text-muted">El nombre de la mascota</small>
+            </div>
+            <div class="form-group">
+                <label for="image">Imagen</label>
+                <input type="file" class="form-control" name="image" id="image" />
             </div>
             <div class="form-group">
                 <label for="race">Especie</label>
@@ -117,7 +124,7 @@
 <!-- ModalUpdate -->
 @foreach ($pets as $pet)
 <div class="modal fade" id="editarPet{{$pet['id']}}" tabindex="-1" aria-labelledby="editarPetLabel" aria-hidden="true">
-    <form method="POST" action="{{route('mascotas.update',$pet['id'])}}">
+    <form method="POST" action="{{route('mascotas.update',$pet['id'])}}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
   <div class="modal-dialog">
@@ -130,6 +137,10 @@
                 <label for="name">Nombre</label>
                 <input value="{{$pet['name']}}" type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" required/>
                 <small id="nameHelp" class="form-text text-muted">El nombre de la mascota</small>
+            </div>
+            <div class="form-group">
+                <label for="image">Imagen</label>
+                <input type="file" class="form-control" name="image" id="image" />
             </div>
             <div class="form-group">
                 <label for="race">Especie</label>
