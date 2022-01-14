@@ -4,20 +4,20 @@
 <div class="row text-center">
 @if (count($pets)==0)
     <div class="card col-10 mx-auto">
-        <div class="card-body">
+        <div class="card-body d-grid gap-2">
             <h3>Actualmente no tienes ninguna mascota.</h3>
             <button type="button" class="btn btn-success btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#createPet">Agregar mascota</button>
         </div>
     </div>
 @else
     <div class="card col-10 mx-auto mb-3">
-        <div class="card-body">
+        <div class="card-body d-grid gap-2">
             <h3>Mascotas en propiedad: {{count($pets)}}</h3>
             <button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#createPet">Agregar mascota</button>
         </div>
     </div>
     @foreach ($pets as $pet)
-    <div class="card col-3 mx-auto" style="width: 18rem;">
+    <div class="card col-12 col-md-3 mx-auto p-0">
         <img src="/storage/{{$pet['image']}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{$pet['name']}}</h5>
@@ -88,7 +88,7 @@
             </div>
             <div class="form-group">
                 <label for="race">Especie</label>
-                <select name="race" id="race" class="custom-select custom-select-sm">
+                <select name="race" id="race" class="form-select form-select-sm">
                     <option>Seleccione una</option>
                     <option value="0">Perro</option>
                     <option value="1">Gato</option>
@@ -97,7 +97,7 @@
             </div>
             <div class="form-group">
                 <label for="gender">Genero</label>
-                <select name="gender" id="gender" class="custom-select custom-select-sm">
+                <select name="gender" id="gender" class="form-select form-select-sm">
                     <option>Seleccione el sexo</option>
                     <option value="0">Masculino</option>
                     <option value="1">Femenino</option>
@@ -144,7 +144,7 @@
             </div>
             <div class="form-group">
                 <label for="race">Especie</label>
-                <select name="race" id="race" class="custom-select custom-select-sm">
+                <select name="race" id="race" class="form-select form-select-sm">
                     <option>Seleccione una</option>
                     <option value="0" @if ($pet['race'] == '0') selected @endif>Perro</option>
                     <option value="1" @if ($pet['race'] == '1') selected @endif>Gato</option>
@@ -153,7 +153,7 @@
             </div>
             <div class="form-group">
                 <label for="gender">Genero</label>
-                <select name="gender" id="gender" class="custom-select custom-select-sm">
+                <select name="gender" id="gender" class="form-select form-select-sm">
                     <option>Seleccione el sexo</option>
                     <option value="0" @if ($pet['gender'] == '0') selected @endif>Masculino</option>
                     <option value="1" @if ($pet['gender'] == '1') selected @endif>Femenino</option>
