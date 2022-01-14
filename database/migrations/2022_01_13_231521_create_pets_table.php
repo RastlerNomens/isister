@@ -17,10 +17,10 @@ class CreatePetsTable extends Migration
             $table->id();
             $table->bigInteger('owner');
             $table->string('name',30);
-            $table->integer('gender',1);
+            $table->integer('gender',false, true)->length(1);
             $table->date('birthday');
-            $table->integer('race',3);
-            $table->integer('code',15);
+            $table->integer('race',false, true)->length(3);
+            $table->bigInteger('code_chip',false, true)->length(15);
             $table->timestamps();
         });
     }
