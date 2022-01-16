@@ -48,13 +48,16 @@
             </li>
             <li class="list-group-item">{{$pet['birthday']}}</li>
         </ul>
+        <form method="post" action="{{route('mascotas.destroy',$pet['id'])}}" id="delete{{$pet['birthday']}}"> 
+            @csrf
+            @method('DELETE')
+        </form>
         <div class="card-body d-flex justify-content-around">
-            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarPet{{$pet['id']}}">Editar</button>
-            <form method="post" action="{{route('mascotas.destroy',$pet['id'])}}"> 
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-outline-danger">Dar de baja</button>
-            </form>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editarPet{{$pet['id']}}">Editar</button>
+                <a href="{{route('vacunas.index',$pet['id'])}}" class="btn btn-primary">Vacunas</a>
+                <button type="submit" form="delete{{$pet['birthday']}}" class="btn btn-danger">Dar de baja</button>
+            </div>
         </div>
         <div class="card-footer">
             <small class="text-muted">

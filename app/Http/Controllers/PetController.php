@@ -20,7 +20,7 @@ class PetController extends Controller
 
         $pets = Pet::where('owner',$user_id)->get();
 
-        return view("pets.index", ["pets"=>$pets]);
+        return view('pets.index', ['pets'=>$pets]);
     }
 
     /**

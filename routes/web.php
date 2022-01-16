@@ -21,7 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/mascotas','PetController@index')->name('mascotas.index');
-Route::post('/mascotas/add','PetController@store')->name('mascotas.store');
-Route::put('/mascotas/update/{id}','PetController@update')->name('mascotas.update');
-Route::delete('/mascotas/delete/{id}','PetController@destroy')->name('mascotas.destroy');
+Route::group(['middleware' => 'auth'], function () {
+    //Mascota
+    Route::get('/mascotas','PetController@index')->name('mascotas.index');
+    Route::post('/mascotas/add','PetController@store')->name('mascotas.store');
+    Route::put('/mascotas/update/{id}','PetController@update')->name('mascotas.update');
+    Route::delete('/mascotas/delete/{id}','PetController@destroy')->name('mascotas.destroy');
+
+    //Vacuna
+    Route::get('mascotas/{id}/vacunas', 'VaccineController@index')->name('vacunas.index');
+    Route::post('mascotas/vacunas', 'VaccineController@store')->name('vacunas.store');
+});
