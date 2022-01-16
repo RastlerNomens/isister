@@ -56,6 +56,7 @@
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editarPet{{$pet['id']}}">Editar</button>
                 <a href="{{route('vacunas.index',$pet['id'])}}" class="btn btn-primary">Vacunas</a>
+                <a href="{{route('vacunas.report',$pet['id'])}}" class="btn btn-primary">PDF</a>
                 <button type="submit" form="delete{{$pet['birthday']}}" class="btn btn-danger">Dar de baja</button>
             </div>
         </div>

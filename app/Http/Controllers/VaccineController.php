@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Disease;
 use App\Pet;
 use App\Vaccine;
+use PDF;
 use Illuminate\Http\Request;
 
 class VaccineController extends Controller
@@ -104,5 +105,14 @@ class VaccineController extends Controller
     public function destroy(Vaccine $vaccine)
     {
         //
+    }
+
+    public function report($id) {
+        $data['vaccines'] = Vaccine::where('pet',$id)->get();
+        $pet = Pet::find($id);
+        $data['diseases'] = Disease::where('race',$pet['race'])->get();
+        $data['pet'] = $pet;
+        $pdf = PDF::loadView('reports.vaccine',$data)->setPaper('a4', 'landscape');
+        return $pdf->download('vacunas.pdf');
     }
 }

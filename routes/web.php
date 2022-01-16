@@ -31,4 +31,5 @@ Route::group(['middleware' => 'auth'], function () {
     //Vacuna
     Route::get('mascotas/{id}/vacunas', 'VaccineController@index')->name('vacunas.index');
     Route::post('mascotas/vacunas', 'VaccineController@store')->name('vacunas.store');
+    Route::get('mascotas/{id}/vacunas/pdf','VaccineController@report')->name('vacunas.report');
 });
