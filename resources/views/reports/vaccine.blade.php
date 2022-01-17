@@ -70,7 +70,7 @@
       <tr>
         <td class="borderless">
             <p class="izq">
-              Isister
+              Isister.net
             </p>
         </td>
         <td class="borderless">
