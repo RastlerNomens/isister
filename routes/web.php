@@ -33,3 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('mascotas/vacunas', 'VaccineController@store')->name('vacunas.store');
     Route::get('mascotas/{id}/vacunas/pdf','VaccineController@report')->name('vacunas.report');
 });
+
+Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
