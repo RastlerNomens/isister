@@ -18,10 +18,10 @@ class CreateVaccinesTable extends Migration
             $table->bigInteger('pet');
             $table->bigInteger('type');
             $table->date('date');
-            $table->date('next');
-            $table->integer('weight');
-            $table->bigInteger('batch');
-            $table->bigInteger('veterinary');
+            $table->date('next')->nullable();
+            $table->integer('weight')->nullable();
+            $table->string('batch');
+            $table->string('veterinary');
             $table->timestamps();
         });
     }

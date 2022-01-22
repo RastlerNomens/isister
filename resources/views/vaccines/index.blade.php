@@ -67,11 +67,11 @@
             </div>
             <div class="form-group">
                 <label for="batch">Nº Lote</label>
-                <input type="number" class="form-control" name="batch" id="batch" />
+                <input type="text" class="form-control" name="batch" id="batch" />
             </div>
             <div class="form-group">
                 <label for="veterinary">Nº Veterinario</label>
-                <input type="number" class="form-control" name="veterinary" id="veterinary" />
+                <input type="text" class="form-control" name="veterinary" id="veterinary" />
             </div>
         </div>
         <div class="modal-footer">

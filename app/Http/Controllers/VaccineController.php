@@ -44,7 +44,7 @@ class VaccineController extends Controller
     {
         $this->validate(request(), [
             'date' => 'required',
-            'next' => 'required'
+            'type' => 'required'
         ]);
 
         $vaccine = new Vaccine();
