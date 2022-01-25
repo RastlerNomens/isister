@@ -19,9 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+
     //Mascota
     Route::get('/mascotas','PetController@index')->name('mascotas.index');
     Route::post('/mascotas/add','PetController@store')->name('mascotas.store');
@@ -32,7 +33,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('mascotas/{id}/vacunas', 'VaccineController@index')->name('vacunas.index');
     Route::post('mascotas/vacunas', 'VaccineController@store')->name('vacunas.store');
     Route::get('mascotas/{id}/vacunas/pdf','VaccineController@report')->name('vacunas.report');
+
+    //Profile
+    //Route::get('profile',)
 });
 
+// Social Login
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');

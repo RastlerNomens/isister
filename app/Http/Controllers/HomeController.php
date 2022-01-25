@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return redirect()->route('mascotas.index');
+    }
+
+    public function profile() {
+        echo"hola";
     }
 }
