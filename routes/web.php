@@ -35,7 +35,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('mascotas/{id}/vacunas/pdf','VaccineController@report')->name('vacunas.report');
 
     //Profile
-    //Route::get('profile',)
+    Route::get('profile','HomeController@profile')->name('profile');
+    Route::post('profile/zoological','HomeContoller@zoological')->name('profile.zoological');
+    Route::post('profile/zoological/exist','HomeController@is_zoological')->name('profile.is_zoological');
+    Route::post('profile/particular','HomeController@particular')->name('profile.particular');
 });
 
 // Social Login

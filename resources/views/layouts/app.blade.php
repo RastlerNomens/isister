@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -55,11 +56,19 @@
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="left: -75px">
+                                <li><a class="dropdown-item" href="{{ route('profile') }}">{{ __('Edit Profile') }}</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                <i class="fas fa-sign-out-alt"></i>
                             </a>
                         </li>
 

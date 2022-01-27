@@ -18,6 +18,7 @@ class AddProfileToUsersTable extends Migration
             $table->string('zoological_core')->nullable();
             $table->string('zoological_name',25)->nullable();
             $table->text('zoological_direction')->nullable();
+            $table->boolean('public')->default(false);
         });
     }
 
