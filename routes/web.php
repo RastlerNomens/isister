@@ -20,7 +20,17 @@ Route::get('/', function () {
 Auth::routes();
 
 
+Route::get('/roles', 'PermissionController@Permission');
 Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'role:developer'], function() {
+
+        Route::get('/admin', function() {
+     
+           return 'Welcome Admin';
+           
+        });
+     
+     });
     Route::get('/home', 'HomeController@index')->name('home');
 
     //Mascota

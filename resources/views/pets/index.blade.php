@@ -70,7 +70,13 @@
     @endforeach
 @endif
 </div>
+<!--
+@role('developer')
 
+Hello developer
+
+@endrole
+-->
 <!-- Modal Create -->
 <div class="modal fade" id="createPet" tabindex="-1" aria-labelledby="createPetLabel" aria-hidden="true">
     <form method="POST" action="{{route('mascotas.store')}}" enctype="multipart/form-data">
