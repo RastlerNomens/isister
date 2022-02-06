@@ -10,7 +10,7 @@
         </div>
     </div>
 @else
-    <div class="card col-10 mx-auto">
+    <div class="card col-10 mx-auto mb-3">
         <div class="card-body d-grid gap-2">
             <h3>Historial de vacunas: {{$pet['name']}}</h3>
             <button type="button" class="btn btn-success btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#addVaccine">Agregar vacuna</button>
@@ -20,9 +20,11 @@
     <div class="card col-10 col-md-3 mx-auto p-0">
         <div class="card-header">
             @foreach ($diseases as $disease)
-                @if ($disease['id'] == $vaccine['type'])
-                    {{$disease['name']}}
-                @endif
+                @foreach($vaccine['type'] as $type)
+                    @if ($disease['id'] == $type)
+                        {{$disease['name']}}
+                    @endif
+                @endforeach
             @endforeach
         </div>
         <ul class="list-group list-group-flush">
@@ -46,7 +48,7 @@
         @csrf
             <div class="form-group">
                 <label for="type">Vacuna</label>
-                <select name="type" id="type" class="form-select">
+                <select name="type[]" id="type" multiple class="form-select">
                     <option>Seleccione enfermedad</option>
                     @foreach ($diseases as $disease)
                     <option value="{{$disease['id']}}">{{$disease['name']}}</option>
