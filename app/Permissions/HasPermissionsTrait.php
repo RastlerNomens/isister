@@ -28,7 +28,7 @@ trait HasPermissionsTrait {
         return $this->givePermissionsTo($permissions);
     }
 
-    public function hasPermissionsTo($permission) {
+    public function hasPermissionTo($permission) {
         return $this->hasPermissionThroughRole($permission) || $this->hasPermission($permission);
     }
 
