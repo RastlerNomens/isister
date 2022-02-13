@@ -69,6 +69,12 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" aria-current="page">
+                                    <i class="fas fa-user"></i>
+                                    Enfermedades
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" aria-current="page">
                                     <i class="fas fa-tasks"></i>
                                     Functions
                                 </a>
