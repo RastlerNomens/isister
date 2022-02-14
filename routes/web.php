@@ -23,10 +23,10 @@ Auth::routes();
 Route::get('/roles', 'PermissionController@Permission');
 Route::group(['middleware' => 'auth'], function () {
     //Role Developer
-    Route::group(['middleware' => 'role:developer'], function() {
+    Route::group(['middleware' => 'permission:create-tasks'], function() {
+        Route::get('/beastmaster','BeastMasterController@dashboard')->name('beastmaster.dashboard');
 
-        Route::get('/admin','BeastMasterController@dashboard')->name('beastmaster.dashboard');
-        Route::prefix('admin')->group(function(){
+        Route::prefix('beastmaster')->group(function(){
             Route::get('users','BeastMasterController@getUsers')->name('beastmaster.getUsers');
         });
      

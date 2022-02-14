@@ -18,5 +18,13 @@
             </div>
         </div>
     </div>
+    <div class="col">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Usuarios nuevos este mes</h5>
+                <h2 class="card-text">{{$users}}</h2>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

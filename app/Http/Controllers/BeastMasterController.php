@@ -8,6 +8,7 @@ use App\Disease;
 use App\Pet;
 use App\Vaccine;
 use App\User;
+use App\Role;
 
 class BeastMasterController extends Controller
 {
@@ -23,7 +24,9 @@ class BeastMasterController extends Controller
     }
 
     public function getUsers(Request $request) {
-        return view('beastmaster.users');
+        $users = User::all();
+        $roles = Role::all();
+        return view('beastmaster.users',['users'=>$users,'roles'=>$roles]);
     }
 
 
