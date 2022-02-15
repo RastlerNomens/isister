@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/roles', 'PermissionController@Permission');
 Route::group(['middleware' => 'auth'], function () {
     //Role Developer
-    Route::group(['middleware' => 'permission:create-tasks'], function() {
+    Route::group(['middleware' => 'permission:beastmaster'], function() {
         Route::get('/beastmaster','BeastMasterController@dashboard')->name('beastmaster.dashboard');
 
         Route::prefix('beastmaster')->group(function(){

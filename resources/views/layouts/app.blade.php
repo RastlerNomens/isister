@@ -37,11 +37,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     @if (Route::has('register'))
-                        @role('developer')
+                        @can('beastmaster')
                         <li class="nav-item" @if (request()->is('beastmaster')) aria-current="page" @endif>
                             <a class="nav-link @if(request()->is('beastmaster')) active @endif" href="{{ route('beastmaster.dashboard') }}">BeastMaster</a>
                         </li>
-                        @endrole
+                        @endcan
                         <li class="nav-item" @if (request()->is('mascotas')) aria-current="page" @endif>
                             <a class="nav-link  @if (request()->is('mascotas')) active @endif" href="{{ route('mascotas.index') }}">Mascotas</a>
                         </li>
