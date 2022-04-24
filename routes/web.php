@@ -22,15 +22,17 @@ Auth::routes();
 
 Route::get('/roles', 'PermissionController@Permission');
 Route::group(['middleware' => 'auth'], function () {
-    Route::group(['middleware' => 'role:developer'], function() {
+    //Role Developer
+    Route::group(['middleware' => 'permission:beastmaster'], function() {
+        Route::get('/beastmaster','BeastMasterController@dashboard')->name('beastmaster.dashboard');
 
-        Route::get('/admin', function() {
-     
-           return 'Welcome Admin';
-           
+        Route::prefix('beastmaster')->group(function(){
+            Route::get('users','BeastMasterController@getUsers')->name('beastmaster.getUsers');
         });
      
      });
+
+
     Route::get('/home', 'HomeController@index')->name('home');
 
     //Mascota

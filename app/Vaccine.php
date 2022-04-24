@@ -9,4 +9,8 @@ class Vaccine extends Model
     protected $fillable = [
         'pet','type','date','next','weight','batch','veterinary'
     ];
+
+    protected $casts = [
+        'type' => 'array'
+    ];
 }

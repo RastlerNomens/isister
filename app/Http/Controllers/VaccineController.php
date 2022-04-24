@@ -43,8 +43,7 @@ class VaccineController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(), [
-            'date' => 'required',
-            'type' => 'required'
+            'date' => 'required'
         ]);
 
         $vaccine = new Vaccine();
