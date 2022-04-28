@@ -1,11 +1,3 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -15,7 +7,41 @@
   \*****************************/
 /***/ (() => {
 
-eval("/**\r\n * First we will load all of this project's JavaScript dependencies which\r\n * includes Vue and other libraries. It is a great starting point when\r\n * building robust, powerful web applications using Vue and Laravel.\r\n */\n\n/*\r\nrequire('./bootstrap');\r\n\r\nwindow.Vue = require('vue');\r\n\r\n/**\r\n * The following block of code may be used to automatically register your\r\n * Vue components. It will recursively scan this directory for the Vue\r\n * components and automatically register them with their \"basename\".\r\n *\r\n * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>\r\n */\n// const files = require.context('./', true, /\\.vue$/i)\n// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))\n\n/*\r\nVue.component('example-component', require('./components/ExampleComponent.vue').default);\r\n\r\n/**\r\n * Next, we will create a fresh Vue application instance and attach it to\r\n * the page. Then, you may begin adding components to this application\r\n * or customize the JavaScript scaffolding to fit your unique needs.\r\n */\n\n/*\r\nconst app = new Vue({\r\n    el: '#app',\r\n});\r\n*///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYXBwLmpzP2NlZDYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBOztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBGaXJzdCB3ZSB3aWxsIGxvYWQgYWxsIG9mIHRoaXMgcHJvamVjdCdzIEphdmFTY3JpcHQgZGVwZW5kZW5jaWVzIHdoaWNoXHJcbiAqIGluY2x1ZGVzIFZ1ZSBhbmQgb3RoZXIgbGlicmFyaWVzLiBJdCBpcyBhIGdyZWF0IHN0YXJ0aW5nIHBvaW50IHdoZW5cclxuICogYnVpbGRpbmcgcm9idXN0LCBwb3dlcmZ1bCB3ZWIgYXBwbGljYXRpb25zIHVzaW5nIFZ1ZSBhbmQgTGFyYXZlbC5cclxuICovXHJcbi8qXHJcbnJlcXVpcmUoJy4vYm9vdHN0cmFwJyk7XHJcblxyXG53aW5kb3cuVnVlID0gcmVxdWlyZSgndnVlJyk7XHJcblxyXG4vKipcclxuICogVGhlIGZvbGxvd2luZyBibG9jayBvZiBjb2RlIG1heSBiZSB1c2VkIHRvIGF1dG9tYXRpY2FsbHkgcmVnaXN0ZXIgeW91clxyXG4gKiBWdWUgY29tcG9uZW50cy4gSXQgd2lsbCByZWN1cnNpdmVseSBzY2FuIHRoaXMgZGlyZWN0b3J5IGZvciB0aGUgVnVlXHJcbiAqIGNvbXBvbmVudHMgYW5kIGF1dG9tYXRpY2FsbHkgcmVnaXN0ZXIgdGhlbSB3aXRoIHRoZWlyIFwiYmFzZW5hbWVcIi5cclxuICpcclxuICogRWcuIC4vY29tcG9uZW50cy9FeGFtcGxlQ29tcG9uZW50LnZ1ZSAtPiA8ZXhhbXBsZS1jb21wb25lbnQ+PC9leGFtcGxlLWNvbXBvbmVudD5cclxuICovXHJcblxyXG4vLyBjb25zdCBmaWxlcyA9IHJlcXVpcmUuY29udGV4dCgnLi8nLCB0cnVlLCAvXFwudnVlJC9pKVxyXG4vLyBmaWxlcy5rZXlzKCkubWFwKGtleSA9PiBWdWUuY29tcG9uZW50KGtleS5zcGxpdCgnLycpLnBvcCgpLnNwbGl0KCcuJylbMF0sIGZpbGVzKGtleSkuZGVmYXVsdCkpXHJcbi8qXHJcblZ1ZS5jb21wb25lbnQoJ2V4YW1wbGUtY29tcG9uZW50JywgcmVxdWlyZSgnLi9jb21wb25lbnRzL0V4YW1wbGVDb21wb25lbnQudnVlJykuZGVmYXVsdCk7XHJcblxyXG4vKipcclxuICogTmV4dCwgd2Ugd2lsbCBjcmVhdGUgYSBmcmVzaCBWdWUgYXBwbGljYXRpb24gaW5zdGFuY2UgYW5kIGF0dGFjaCBpdCB0b1xyXG4gKiB0aGUgcGFnZS4gVGhlbiwgeW91IG1heSBiZWdpbiBhZGRpbmcgY29tcG9uZW50cyB0byB0aGlzIGFwcGxpY2F0aW9uXHJcbiAqIG9yIGN1c3RvbWl6ZSB0aGUgSmF2YVNjcmlwdCBzY2FmZm9sZGluZyB0byBmaXQgeW91ciB1bmlxdWUgbmVlZHMuXHJcbiAqL1xyXG4vKlxyXG5jb25zdCBhcHAgPSBuZXcgVnVlKHtcclxuICAgIGVsOiAnI2FwcCcsXHJcbn0pO1xyXG4qLyJdLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+/*
+require('./bootstrap');
+
+window.Vue = require('vue');
+
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+/*
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+/*
+const app = new Vue({
+    el: '#app',
+});
+*/
 
 /***/ }),
 
@@ -26,7 +52,9 @@ eval("/**\r\n * First we will load all of this project's JavaScript dependencies
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz9hODBiIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ })
 

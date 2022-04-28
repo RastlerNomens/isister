@@ -6,7 +6,7 @@
     use Socialite;
     use Auth;
     use Exception;
-    use App\User;
+    use App\Models\User;
 
 class GoogleController extends Controller {
 
